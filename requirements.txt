@@ -1,0 +1,5 @@
+Django
+django-webpack-loader
+djangorestframework
+djangorestframework-jwt
+django-cors-headers
