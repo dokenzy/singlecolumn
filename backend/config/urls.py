@@ -19,12 +19,12 @@ from django.contrib import admin
 
 from rest_framework_jwt.views import obtain_jwt_token
 
-import backend.views
+from backend.vue import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/auth/token', obtain_jwt_token),
-    url(r'^.*$', backend.views.index)
+    url(r'^.*$', views.index)
 ]
 
 if settings.DEBUG:
