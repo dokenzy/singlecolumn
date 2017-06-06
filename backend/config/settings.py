@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'webpack_loader',
     'vue',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -143,3 +144,5 @@ CORS_ORIGIN_WHITELIST = (
     'localhost:8000',
     '127.0.0.1:8000'
 )
+
+AUTH_USER_MODEL = 'users.User'
