@@ -1,7 +1,17 @@
 <template>
   <div>
     <h1>Login</h1>
-    <button @click="login">Log in</button>
+    <form @submit.prevent="login">
+      <label for="username">
+        ID:
+        <input type="text" id="username" v-model="user.username" />
+      </label>
+      <label for="password">
+        Password:
+        <input type="password" id="password" v-model="user.password" />
+      </label>
+      <button type="submit">Log in</button>
+    </form>
   </div>
 </template>
 
@@ -12,8 +22,8 @@
     data () {
       return {
         user: {
-          username: 'admin',
-          password: 'anfdavnl'
+          username: '',
+          password: ''
         }
       }
     },
