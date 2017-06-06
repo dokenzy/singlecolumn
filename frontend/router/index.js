@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
+import Profile from '../views/Profile.vue'
 import PageNotFound from '../views/PageNotFound.vue'
 
 Vue.use(Router)
@@ -10,6 +11,7 @@ Vue.use(Router)
 const routes = [
   { path: '/', component: Home },
   { path: '/login', component: Login },
+  { path: '/profile', component: Profile },
   { path: '*', component: PageNotFound }
 ]
 

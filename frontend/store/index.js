@@ -42,12 +42,14 @@ const actions = {
     }).then((response) => {
       const token = response.data.token;
       localStorage.setItem('token', token);
+      localStorage.setItem('username', payload.username);
       commit('LOGIN_SUCCESS', token);
     });
   },
 
   logout ({ commit }) {
     localStorage.removeItem('token');
+    localStorage.removeItem('username');
     commit('LOGOUT');
   }
 };

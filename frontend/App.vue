@@ -6,7 +6,10 @@
     <ul>
       <li><router-link to="/">Home</router-link></li>
       <li v-if="! isAuthenticated()"><router-link to="/login">Log in</router-link></li>
-      <li v-else><a href="#" @click="logout">Logout</a></li>
+      <li v-else>
+        <a href="#" @click="logout">Logout</a>
+        <router-link to="/profile">Profile</router-link>
+      </li>
       <li><router-link to="/page-not-found">Page not found</router-link></li>
     </ul>
     <router-view></router-view>
