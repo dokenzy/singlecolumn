@@ -25,7 +25,7 @@
         url: `http://localhost:8000/api/users/${username}/profile/`,
         method: 'get',
         headers: {
-          Authorization: 'TOKEN ' + localStorage.getItem('token')
+          Authorization: 'JWT ' + localStorage.getItem('token')
         }
       }).then((response) => {
         this.user.username = response.data.username;

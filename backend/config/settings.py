@@ -36,10 +36,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # 3rd party apps
     'corsheaders',
+    'rest_framework',
+    'rest_framework_jwt',
     'webpack_loader',
-    'vue',
+
+    # local apps
     'users',
+    'vue',
 ]
 
 MIDDLEWARE = [
@@ -131,8 +137,6 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
     ),
 }
 
