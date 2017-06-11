@@ -4,6 +4,19 @@
     <div v-if="user.username !== ''">
       <p>ID: {{ user.username }}</p>
     </div>
+    <div class="chat-other">
+      <div class="chat-user">
+        <img src="assets/linux-avatar.png">
+      </div>
+      <div class="chat-date">
+        7 minutes ago
+      </div>
+      <div class="chat-message">
+        <p>
+          hey, if you type in your pw, it will show as stars
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
