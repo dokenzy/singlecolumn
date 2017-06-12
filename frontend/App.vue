@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Main Menu</h2>
-    <ul>
-      <li><router-link to="/">Home</router-link></li>
-      <li v-if="! isAuthenticated()"><router-link to="/login">Log in</router-link></li>
-      <li v-else>
-        <a href="#" @click="logout">Logout</a>
-        <router-link to="/profile">Profile</router-link>
-      </li>
-      <li><router-link to="/page-not-found">Page not found</router-link></li>
-    </ul>
-    <router-view></router-view>
+    <!-- <img src="./assets/logo.png"> -->
+    <q-layout>
+      <div slot="header" class="toolbar">
+        <q-toolbar-title :padding="1">
+          Single Column
+        </q-toolbar-title>
+      </div>
+      <q-tabs slot="navigation">
+        <q-tab icon="home" route="/" exact replace>Home</q-tab>
+        <q-tab icon="vpn_key" route="/login" exact replace v-if="! isAuthenticated()">Log in</q-tab>
+        <q-tab icon="person" route="/profile" exact replace v-if="isAuthenticated()">Profile</q-tab>
+        <q-tab icon="exit_to_app" v-if="isAuthenticated()" @selected="logout">Logout</q-tab>
+      </q-tabs>
+      <router-view class="layout-view"></router-view>
+    </q-layout>
   </div>
 </template>
 
@@ -22,7 +24,6 @@
 
     data () {
       return {
-        msg: 'Welcome to Your Vue.js App'
       }
     },
 

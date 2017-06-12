@@ -1,20 +1,11 @@
 <template>
   <div>
-    <h1>Profile</h1>
-    <div v-if="user.username !== ''">
-      <p>ID: {{ user.username }}</p>
+    <div class="card">
+    <div class="card-title">
+      <h4>Profile</h4>
     </div>
-    <div class="chat-other">
-      <div class="chat-user">
-        <img src="assets/linux-avatar.png">
-      </div>
-      <div class="chat-date">
-        7 minutes ago
-      </div>
-      <div class="chat-message">
-        <p>
-          hey, if you type in your pw, it will show as stars
-        </p>
+      <div v-if="user.username !== ''" class="card-content">
+        <p>ID: {{ user.username }}</p>
       </div>
     </div>
   </div>
