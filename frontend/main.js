@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import 'quasar-framework/dist/quasar.mat.styl'
+import './themes/mat.styl'
 import Quasar from 'quasar-framework'
 import App from './App.vue'
 import router from './router'
