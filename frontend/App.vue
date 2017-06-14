@@ -9,6 +9,7 @@
       </div>
       <q-tabs slot="navigation">
         <q-tab icon="home" route="/" exact replace>Home</q-tab>
+        <q-tab icon="home" route="/posts" exact>Posts</q-tab>
         <q-tab icon="vpn_key" route="/login" exact replace v-if="! isAuthenticated()">Log in</q-tab>
         <q-tab icon="person" route="/profile" exact replace v-if="isAuthenticated()">Profile</q-tab>
         <q-tab icon="exit_to_app" v-if="isAuthenticated()" @selected="logout">Logout</q-tab>

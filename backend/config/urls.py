@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/auth/token', obtain_jwt_token),
     url(r'^api/users/', include('users.urls')),
+    url(r'^api/posts/', include('posts.urls')),
     url(r'^.*$', views.index)
 ]
 
