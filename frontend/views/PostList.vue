@@ -2,7 +2,7 @@
   <div>
     <h2>Posts</h2>
     <template v-for="post in posts">
-      <h3>{{ post.title }}</h3>
+      <h3><router-link :to="{name: 'post-detail', params: {'id': post.id }}">{{ post.title }}</router-link></h3>
       <p>{{ post.created_at }} by {{ post.user }}</p>
       <div>{{ post.content }}</div>
     </template>
