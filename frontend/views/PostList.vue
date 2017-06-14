@@ -10,8 +10,6 @@
 </template>
 
 <script>
-  import axios from 'axios'
-
   export default {
     data () {
       return {
@@ -19,7 +17,7 @@
       }
     },
     mounted () {
-      axios({
+      this.$axios({
         url: 'http://127.0.0.1:8000/api/posts/',
         method: 'get'
       }).then((response) => {

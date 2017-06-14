@@ -12,8 +12,6 @@
 </template>
 
 <script>
-  import axios from 'axios'
-
   export default {
     data () {
       return {
@@ -25,7 +23,7 @@
 
     mounted () {
       const username = localStorage.getItem('username')
-      axios({
+      this.$axios({
         url: `http://localhost:8000/api/users/${username}/profile/`,
         method: 'get',
         headers: {
