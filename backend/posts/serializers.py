@@ -6,7 +6,7 @@ from rest_framework.serializers import (
 from .models import Post
 
 
-class PostListSerializer(ModelSerializer):
+class PostSerializer(ModelSerializer):
     user = SerializerMethodField()
 
     class Meta:
