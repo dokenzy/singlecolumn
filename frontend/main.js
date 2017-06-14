@@ -7,7 +7,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-Vue.prototype.$axios = axios
+const _axios = axios.create({
+  baseURL: 'http://127.0.0.1:8000/api/'
+})
+Vue.prototype.$axios = _axios
 Vue.use(Quasar)
 
 // eslint-disable-next-line no-new

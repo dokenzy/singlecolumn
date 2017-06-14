@@ -17,7 +17,7 @@
     mounted () {
       const id = this.$route.params.id;
       this.$axios({
-        url: `http://127.0.0.1:8000/api/posts/${id}/`,
+        url: `/posts/${id}/`,
         method: 'get'
       }).then((response) => {
         this.post = response.data;

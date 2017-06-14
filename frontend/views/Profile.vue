@@ -24,7 +24,7 @@
     mounted () {
       const username = localStorage.getItem('username')
       this.$axios({
-        url: `http://localhost:8000/api/users/${username}/profile/`,
+        url: `/users/${username}/profile/`,
         method: 'get',
         headers: {
           Authorization: 'JWT ' + localStorage.getItem('token')
